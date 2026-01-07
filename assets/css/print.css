@@ -1,0 +1,193 @@
+/* File: assets/css/print.css */
+
+/* --- SETUP KERTAS A4 --- */
+@page {
+  size: A4;
+  margin: 2cm;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #000;
+  background: #ccc; /* Abu-abu di layar monitor */
+  margin: 0;
+}
+
+/* KOTAK KERTAS (Hanya efek visual di layar) */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  margin: 10mm auto;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* --- KOMPONEN: TOMBOL NON-PRINT --- */
+.no-print {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  text-align: center;
+}
+
+.btn-print {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.btn-print:hover {
+  background: #1a252f;
+}
+
+/* --- KOMPONEN: KOP SURAT --- */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 3px double #000;
+  padding-bottom: 10px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 14pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.header h2 {
+  margin: 2px 0;
+  font-size: 16pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.header p {
+  margin: 2px 0;
+  font-size: 11pt;
+  font-style: italic;
+}
+
+/* --- KOMPONEN: JUDUL DOKUMEN --- */
+.title-section {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.title-text {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14pt;
+  text-transform: uppercase;
+  display: block;
+}
+.nomor-surat {
+  font-size: 12pt;
+  display: block;
+  margin-top: 5px;
+}
+
+/* --- KOMPONEN: ISI & TABEL --- */
+.content {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.content p {
+  text-indent: 40px;
+  margin-bottom: 10px;
+}
+
+/* Tabel Biodata (Tanpa Garis) */
+.data-table {
+  width: 100%;
+  margin: 10px 0 20px 20px;
+  border-collapse: collapse;
+}
+.data-table td {
+  vertical-align: top;
+  padding: 3px 0;
+  font-size: 12pt;
+}
+.label-col {
+  width: 180px;
+}
+.sep-col {
+  width: 20px;
+  text-align: center;
+}
+.val-col {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Tabel Laporan (Dengan Garis) */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.report-table th,
+.report-table td {
+  border: 1px solid #000;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 11pt;
+}
+.report-table th {
+  background-color: #f2f2f2;
+  text-align: center;
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+
+/* --- KOMPONEN: TANDA TANGAN --- */
+.signature {
+  float: right;
+  width: 40%;
+  text-align: center;
+  margin-top: 50px;
+}
+.signature p {
+  margin: 0;
+}
+.signature .jabatan {
+  margin-bottom: 80px;
+}
+.signature .nama {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* --- MODE CETAK (PRINTER) --- */
+@media print {
+  body {
+    background: white;
+    margin: 0;
+  }
+  .page {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

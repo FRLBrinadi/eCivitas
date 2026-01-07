@@ -1,0 +1,66 @@
+/* File: assets/css/landing.css */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero Section dengan Background Gradient Biru */
+.hero-section {
+  min-height: 85vh; /* Tinggi hampir selayar penuh */
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  margin-top: 56px; /* Kompensasi navbar fixed */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek hiasan lingkaran di background (Opsional) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+}
+
+/* Icon Box di Fitur */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efek Hover pada Card */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
