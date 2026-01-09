@@ -23,5 +23,6 @@ eCivitas adalah aplikasi berbasis web untuk mempermudah warga dalam mengajukan d
 4. Sesuaikan konfigurasi database di file `config/database.php`.
 
 ## Akun Login (Demo)
-* **petugas:** password: 123456
-* **Warga01:** password: 123456
+* admin: password: 123456
+* petugas01: password: 123456
+* Warga01: password: 123456
