@@ -27,5 +27,3 @@ eCivitas adalah aplikasi berbasis web untuk mempermudah warga dalam mengajukan d
 * petugas01: password: 123456
 * Warga01: password: 123456
 
-5. Link laporan Google Drive
-https://drive.google.com/drive/folders/1pxGSma7PSNgNFO7FdZnv7P0wOG6wO-1V?usp=drive_link
